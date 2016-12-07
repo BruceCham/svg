@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+		*{padding: 0;margin: 0}
+		ul,li{
+			list-style: none;
+		}
+		@font-face {
+			font-family: "<%= fontName %>";
+			src: url('<%= fontPath %><%= fontName %>.eot');
+			src: url('<%= fontPath %><%= fontName %>.eot?#iefix') format('eot'),
+				url('<%= fontPath %><%= fontName %>.woff2') format('woff2'),
+				url('<%= fontPath %><%= fontName %>.woff') format('woff'),
+				url('<%= fontPath %><%= fontName %>.ttf') format('truetype'),
+				url('<%= fontPath %><%= fontName %>.svg#<%= fontName %>') format('svg');
+		}
+
+		.<%= cssClass %>:before {
+			font-family: "<%= fontName %>";
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: normal;
+			/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+			text-decoration: none;
+			text-transform: none;
+		}
+
+		<% _.each(glyphs, function(glyph) { %>
+		.icon-<%= glyph.name %>:before {
+			content: "\<%= glyph.unicode %>";
+		}
+		<% }); %>
+	</style>
+</head>
+<body>
+	<% _.each(glyphs, function(glyph) { %>
+		<ul>
+			<li class="icon icon-<%= glyph.name %>"></li>
+		</ul>
+		<% }); %>
+</body>
+</html>
