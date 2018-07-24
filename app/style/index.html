@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<style>
+		* {
+			padding: 0;
+			margin: 0
+		}
+		body{
+			width: 1200px;
+			margin: 0 auto;
+		}
+		ul,
+		li {
+			list-style: none;
+		}
+		.h1{
+			padding: 20px 0;
+			margin-bottom: 20px;
+			border-bottom: 1px solid #eee;
+		}
+		.box{
+			display: flex;
+			justify-content: start;
+		}
+		.box ul{
+			height: 90px;
+			padding: 10px 20px;
+			font-size: 10px;
+			line-height: 1.4;
+			text-align: center;
+			background-color: #f9f9f9;
+			border: 1px solid #fff;
+		}
+		.box ul:hover {
+			color: #fff;
+			background-color: #563d7c;
+		}
+		.box li{
+			margin-top: 5px;
+			margin-bottom: 10px;
+			font-size: 24px;
+			position: relative;
+			top: 1px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		.box p{
+			text-align: center;
+    	word-wrap: break-word;
+		}
+		@font-face {
+			font-family: "myfont";
+			src: url('./myfont.eot');
+			src: url('./myfont.eot?#iefix') format('eot'),
+			url('./myfont.woff2') format('woff2'),
+			url('./myfont.woff') format('woff'),
+			url('./myfont.ttf') format('truetype'),
+			url('./myfont.svg#myfont') format('svg');
+		}
+
+		.icon:before {
+			font-family: "myfont";
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: normal;
+			/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+			text-decoration: none;
+			text-transform: none;
+		}
+
+		.icon-camera:before {
+				content: "\";
+			}
+			.icon-camera_fill:before {
+				content: "\";
+			}
+			.icon-cart:before {
+				content: "\";
+			}
+			.icon-cart_fill:before {
+				content: "\";
+			}
+			.icon-clock:before {
+				content: "\";
+			}
+			.icon-clothing:before {
+				content: "\";
+			}
+			.icon-etao:before {
+				content: "\";
+			}
+			.icon-link:before {
+				content: "\";
+			}
+			.icon-wanke:before {
+				content: "\";
+			}
+			
+	</style>
+</head>
+
+<body>
+	<h1 class="h1">svg-font 字体图标</h1>
+	<div class="box">
+		
+			<ul>
+				<li class="icon icon-camera"></li>
+				<p>icon</br>icon-camera</p>
+			</ul>
+			
+			<ul>
+				<li class="icon icon-camera_fill"></li>
+				<p>icon</br>icon-camera_fill</p>
+			</ul>
+			
+			<ul>
+				<li class="icon icon-cart"></li>
+				<p>icon</br>icon-cart</p>
+			</ul>
+			
+			<ul>
+				<li class="icon icon-cart_fill"></li>
+				<p>icon</br>icon-cart_fill</p>
+			</ul>
+			
+			<ul>
+				<li class="icon icon-clock"></li>
+				<p>icon</br>icon-clock</p>
+			</ul>
+			
+			<ul>
+				<li class="icon icon-clothing"></li>
+				<p>icon</br>icon-clothing</p>
+			</ul>
+			
+			<ul>
+				<li class="icon icon-etao"></li>
+				<p>icon</br>icon-etao</p>
+			</ul>
+			
+			<ul>
+				<li class="icon icon-link"></li>
+				<p>icon</br>icon-link</p>
+			</ul>
+			
+			<ul>
+				<li class="icon icon-wanke"></li>
+				<p>icon</br>icon-wanke</p>
+			</ul>
+			
+	</div>
+</body>
+
+</html>

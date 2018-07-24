@@ -3,7 +3,7 @@ var gulpLoadPlugins = require('gulp-load-plugins'),
     plugins = gulpLoadPlugins();
 var iconSrc = 'app/svg/',
     iconDir = 'app/style/';
-gulp.task('iconfont', function() {
+gulp.task('default', function() {
     return gulp.src([iconSrc + '**/*.svg'])
         .pipe(plugins.iconfontCss({
             normalize: true,
@@ -24,6 +24,7 @@ gulp.task('iconfont', function() {
                     cssClass: "icon",
                     glyphs: glyphs
                 }))
+                .pipe(plugins.rename('index.html'))
                 .pipe( gulp.dest(iconDir) )
         })
         .pipe(gulp.dest(iconDir));
