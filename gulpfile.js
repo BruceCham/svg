@@ -3,6 +3,7 @@ var gulpLoadPlugins = require('gulp-load-plugins'),
     plugins = gulpLoadPlugins();
 var iconSrc = 'app/svg/',
     iconDir = 'app/style/';
+var runTimestamp = Math.round(Date.now()/1000);
 gulp.task('default', function() {
     return gulp.src([iconSrc + '**/*.svg'])
         .pipe(plugins.iconfontCss({
@@ -14,7 +15,10 @@ gulp.task('default', function() {
             cssClass: "icon"
         }))
         .pipe(plugins.iconfont({
-            fontName: 'myfont'
+            fontName: 'myfont',
+            prependUnicode: true,
+            formats: ['ttf', 'eot', 'woff', 'woff2'],
+            timestamp: runTimestamp
         }))
         .on('glyphs', function(glyphs, options) {
             gulp.src(iconSrc + 'svghtml.html')
