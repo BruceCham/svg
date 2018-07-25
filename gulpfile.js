@@ -6,6 +6,7 @@ var iconSrc = 'app/svg/',
 var runTimestamp = Math.round(Date.now()/1000);
 gulp.task('iconfont', function() {
     return gulp.src([iconSrc + '**/*.svg'])
+        .pipe(plugins.order([iconSrc + '**/*.svg']))
         .pipe(plugins.iconfontCss({
             normalize: true,
             fontName: 'myfont',

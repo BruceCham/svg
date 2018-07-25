@@ -21,19 +21,19 @@
 }
 
 
-.icon-camera:before {
+.icon-camera_fill:before {
 	content: "\E001";
 }
 
-.icon-camera_fill:before {
+.icon-camera:before {
 	content: "\E002";
 }
 
-.icon-cart:before {
+.icon-cart_fill:before {
 	content: "\E003";
 }
 
-.icon-cart_fill:before {
+.icon-cart:before {
 	content: "\E004";
 }
 
