@@ -4,7 +4,7 @@ var gulpLoadPlugins = require('gulp-load-plugins'),
 var iconSrc = 'app/svg/',
     iconDir = 'app/style/';
 var runTimestamp = Math.round(Date.now()/1000);
-gulp.task('default', function() {
+gulp.task('iconfont', function() {
     return gulp.src([iconSrc + '**/*.svg'])
         .pipe(plugins.iconfontCss({
             normalize: true,
