@@ -19,7 +19,7 @@ gulp.task('iconfont', function() {
             prependUnicode: true,
             normalize: true,
             centerhorizontally: true,
-            formats: ['ttf', 'eot', 'woff', 'woff2'],
+            formats: ['ttf', 'eot', 'woff','svg'],
             timestamp: runTimestamp
         }))
         .on('glyphs', function(glyphs, options) {
