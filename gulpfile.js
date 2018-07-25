@@ -17,6 +17,8 @@ gulp.task('iconfont', function() {
         .pipe(plugins.iconfont({
             fontName: 'myfont',
             prependUnicode: true,
+            normalize: true,
+            centerhorizontally: true,
             formats: ['ttf', 'eot', 'woff', 'woff2'],
             timestamp: runTimestamp
         }))
