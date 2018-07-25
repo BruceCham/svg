@@ -9,7 +9,7 @@ gulp.task('default', function() {
         .pipe(plugins.iconfontCss({
             normalize: true,
             fontName: 'myfont',
-            path: iconSrc + 'svg.less',
+            path: iconSrc + 'svg.css',
             targetPath: './svg.css',
             fontPath: './',
             cssClass: "icon"
